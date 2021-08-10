@@ -32,4 +32,8 @@ public class SalaryController {
     public SalaryDto getSalaryById(@PathVariable("salaryId") Long salaryId) {
         return salaryService.getSalary(salaryId);
     }
+    @DeleteMapping("/{salaryId}")
+    public void deleteSalary(@PathVariable("salaryId") Long salaryId) {
+        salaryService.deleteSalary(salaryId);
+    }
 }
